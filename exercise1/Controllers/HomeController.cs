@@ -1,6 +1,7 @@
 ﻿using exercise1.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace exercise1.Controllers
 {
@@ -23,7 +24,13 @@ namespace exercise1.Controllers
             return View();
         }
         public IActionResult Aboutus() 
+            
         {
+            string b = "Arjmandian";
+            int age = 22;
+            NameFunction_4();
+            ViewBag.ret = Kol;
+            ViewBag.WHONAME = $"Im arman{b} and my age is ";
             return View();
         }
         public IActionResult Games () 

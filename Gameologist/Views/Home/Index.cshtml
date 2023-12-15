@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">به سایت گیمولوژیست خوش آمدید</h1>
+    <p>Develop by  <a href="https://github.com/Rmnarj">Arman Arjmandian</a>.</p>
+</div>
+<div>
+      <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            overflow: hidden;
+        }
+
+        .slide>img {
+            width: 700px;
+            height:auto;
+            overflow: hidden;
+        }
+    </style>
+    <div id="slider">
+        <div class="slide"><img src="/img/gta-6.webp" alt="Image 1"></div>
+        <div class="slide"><img src="/img/assassins-creed-mirage-button-fin-1662844632503.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="/img/Spider-Man-2.png" alt="Image 3"></div>
+        <div class="slide"><img src="/img/d9ya20p4x5n71.webp" alt="Image 4"></div>
+        <div class="slide"><img src="/img/forzahorizon5-keyart-vert-rgb-final-1629720353.jpg" alt="Image 5"></div>
+        <div class="slide"><img src="/img/Last_Of_Us_Part_1_keyart3.webp" alt="Image 6"></div>
+       <div class="slide"><img src="/img/MWIII-REVEAL-FULL-TOUT.jpg" alt="Image 7"></div>
+        <div class="slide"><img src="/img/red_dead_redemption_2_cover_art_1.jpg" alt="Image 8"></div>
+        <div class="slide"><img src="/img/tlou2-remastered-1700267556162.jpg" alt="Image 9"></div>
+        <div class="slide"><img src="/img/standard.webp" alt="Image 10"></div>
+        
+
+
+    </div>
+
+    <script>
+        // JavaScript for automatic sliding
+        const slider = document.getElementById('slider');
+        let slideIndex = 0;
+
+        function showSlides() {
+            slideIndex++;
+            if (slideIndex >= document.querySelectorAll('.slide').length) {
+                slideIndex = 0;
+            }
+
+            slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+
+        showSlides();
+    </script>
+
+</div>
